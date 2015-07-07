@@ -1,0 +1,12 @@
+= form_for @weed do |f|
+	= f.text_field :name, class: 'form-control', placeholder: 'Name'
+	%br
+	= f.text_field :description, class: 'form-control', placeholder: 'Description'
+	%br
+	= f.number_field :price, class: 'form-control', placeholder: 'Price (in dollars)'
+	%br
+	= f.number_field :weight, class: 'form-control', placeholder: 'Weight (in oz)'
+	%br
+	%br
+	.col-md-6.col-md-offset-3
+		= f.submit class: 'form-control'

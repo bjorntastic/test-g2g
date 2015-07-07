@@ -1,9 +1,12 @@
 class WeedsController < ApplicationController
 
 	before_action :find_weed, only: [:show, :edit, :update, :destroy]
-	
+
 	def index
 		@weeds = Weed.all
+	end
+
+	def show
 	end
 
 	def new
@@ -17,6 +20,11 @@ class WeedsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def destroy
+		@weed.destroy
+		redirect_to root_path, notice: 'Weed removed'
 	end
 
 	private

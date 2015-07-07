@@ -1,4 +1,20 @@
 %h2 test
 
+#products-wrapper
+	- @weeds.each_slice(4) do |r|
+		.row
+			- r.each do |weed|
+				.col-sm-3
+					.panel.panel-default
+						.panel-heading
+							.panel-title= link_to weed.name, weed_path(weed)
+						.panel-body= weed.description
+						.panel-footer
+							$
+							= weed.price
+							for
+							= weed.weight
+							oz
+
 
 = link_to 'ADD', new_weed_path, class: 'btn btn-primary'

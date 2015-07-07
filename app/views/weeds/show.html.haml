@@ -1,0 +1,11 @@
+.col-sm-8.col-sm-2
+	.panel.panel-default
+		.panel-heading
+			.panel-title= @weed.name
+		.panel-body= @weed.description
+		.panel-footer
+			$
+			= @weed.price
+			for
+			= @weed.weight
+			oz.
