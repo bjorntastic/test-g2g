@@ -9,4 +9,7 @@
 			for
 			= @weed.weight
 			oz.
-	= link_to "Back", root_path, class: 'btn btn-primary'
+	.btn-group
+		= link_to "Back", root_path, class: 'btn btn-default'
+		= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
+		= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }
