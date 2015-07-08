@@ -3,6 +3,9 @@
 	%br
 	= f.text_field :description, class: 'form-control', placeholder: 'Description'
 	%br
+	= f.select :mood, options_for_mood
+	%br
+	%br
 	= f.number_field :price, class: 'form-control', placeholder: 'Price (in dollars)'
 	%br
 	= f.number_field :weight, class: 'form-control', placeholder: 'Weight (in oz)'

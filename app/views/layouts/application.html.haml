@@ -8,6 +8,31 @@
 	= csrf_meta_tags
 
 %body
-	.container
-		.col-sm-6.col-sm-offset-3.text-center= flash[:notice]
-		= yield
+	.col-sm-2
+		.row#side-nav
+			%h1 GREEN2GO
+			.nav
+				%li
+					%a.nav-item{ href: root_path }
+						.inner
+							Products
+				%li
+					%a.nav-item{ href: how_it_works_path }
+						.inner
+							How It Works
+				%li
+					%a.nav-item{ href: about_us_path }
+						.inner
+							About Us
+				%li
+					%a.nav-item{ href: checkout_path }
+						.inner
+							Checkout
+				%li
+					%a#admin-mode{ href: root_path }
+						.inner
+							Admin
+	.col-sm-10
+		.container
+			.col-sm-6.col-sm-offset-3.text-center= flash[:notice]
+			= yield

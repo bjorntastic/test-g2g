@@ -1,15 +1,21 @@
-.col-sm-8.col-sm-offset-2
-	.panel.panel-default
-		.panel-heading
-			.panel-title= @weed.name
-		.panel-body= @weed.description
-		.panel-footer
-			$
-			= @weed.price
-			for
-			= @weed.weight
-			oz.
-	.btn-group
-		= link_to "Back", root_path, class: 'btn btn-default'
-		= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
-		= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }
+.container
+	.show-wrapper
+		.col-sm-8
+			.col-sm-2#product-side-info
+				.quantity= "#{@weed.weight} oz"
+				%small Per pack
+				%small Medium
+			.col-sm-10
+				#product-heading
+					%h2= @weed.name
+				#product-flavor
+					%h4= "Type: #{@weed.type} | Mood: #{@weed.mood}"
+				%hr
+
+
+		.col-sm-4
+
+		.btn-group
+			= link_to "Back", root_path, class: 'btn btn-default'
+			= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
+			= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }

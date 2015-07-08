@@ -16,5 +16,81 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+html {
+
+}
+
+body {
+		font-family: 'Raleway', sans-serif;
+}
+
+#side-nav {
+	color: #fff;
+	height: 100vh;
+	background: #16a085;
+	ul {
+		margin-top: 150px;
+	}
+	.nav {
+		margin-top: 100px;
+		.nav-item {
+			margin: 5px 10px;
+			border-radius: 4px;
+			border: 1px solid white;
+			border-radius: 4px;
+			padding: 12px;
+		}
+	}
+	a { color: #fff; }
+	a:hover {
+		text-decoration: none;
+		color: #9b59b6;
+	}
+}
+
+
+#admin-mode {
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 12px;
+	margin: 0px 10px;
+	margin-top: 300px;
+}
+
+.show-wrapper {
+	margin-top: 50px;
+}
+
+.quantity {
+	background-color: #16a085;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+
+#product-side-info {
+	border-right: 1px solid #16a085;
+	padding-right: 0px;
+	height: 350px;
+}
+
+#product-heading h2 {
+	margin-top: -5px;
+}
+
+
+/* Custom bootstrap colors */
+.btn-primary {
+	background-color: #9b59b6;
+}
+
+#panel-top {
+	background-color: #16a085;
+	a { color: #fff }
+	a:hover {
+		text-decoration: none;
+		color: #9b59b6;
+	}
+}
