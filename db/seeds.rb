@@ -15,7 +15,8 @@ Weed.create(
 	strength: "Heroic",
 	ingredients: "Weed, More weed, Some extra weed",
 	allergies: "Hummingbirds, Guitars, Milk",
-	price: 60
+	price: 60,
+	image: "1.jpg"
 )
 
 Weed.create(
@@ -26,7 +27,8 @@ Weed.create(
 	strength: "Mild",
 	ingredients: "Almond Butter, Sugar, Dark Chocolate, Weed",
 	allergies: "Hazelnuts, Trap Music",
-	price: 80
+	price: 80,
+	image: "2.jpg"
 )
 
 Weed.create(
@@ -37,7 +39,8 @@ Weed.create(
 	strength: "Medium",
 	ingredients: "Sea Salt, Flax Seed, Weed",
 	allergies: "Insects, Plants",
-	price: 50
+	price: 50,
+	image: "3.jpg"
 )
 
 Weed.create(
@@ -48,7 +51,8 @@ Weed.create(
 	strength: "Strong",
 	ingredients: "Weed",
 	allergies: "Gasoline",
-	price: 55
+	price: 55,
+	image: "4.jpg"
 )
 
 Weed.create(
@@ -59,5 +63,6 @@ Weed.create(
 	strength: "Medium",
 	ingredients: "Olive Oil, Sugar, Cinnamon",
 	allergies: "Smoked Salmon, Carrots",
-	price: 70
+	price: 70,
+	image: "5.jpg"
 )
