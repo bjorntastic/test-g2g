@@ -23,6 +23,14 @@
 							%p= "\"#{@weed.description}\""
 				%br
 				%br
+				.pull-right
+					%small.pull-right{style: "padding-right: 30px;"} Admin Tools
+					%br
+					.btn-group
+						= link_to "Back", root_path, class: 'btn btn-default'
+						= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
+						= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }
+
 				#product-ingredients
 					%p
 						%strong All Natural Ingredients:
@@ -35,10 +43,9 @@
 							%small= @weed.allergies
 	
 		.col-sm-4
-		.btn-group
-			= link_to "Back", root_path, class: 'btn btn-default'
-			= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
-			= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }
+			#product-image= image_tag @weed.image
+
+		
 	
 .suggestions-wrapper
 	%a{ href: weed_path(@suggested_first) }

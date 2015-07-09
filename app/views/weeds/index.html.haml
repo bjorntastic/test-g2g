@@ -1,16 +1,33 @@
 .container
 	%h1 All Strains
-	%br
-	%br
-#products-wrapper
-	- @weeds.each_slice(3) do |r|
-		.row.index-product-row
-			- r.each do |weed|
-				%a{ href: weed_path(weed)	}
-					.col-sm-4.index-product
-						%h2= weed.name
-						%p
-							Mood:
-							= weed.mood
-						%br
-						%p= weed.strength
+	#products-wrapper
+		- @weeds.each_slice(3) do |r|
+			.row.index-product-row
+				- r.each do |weed|
+					%a{ href: weed_path(weed)	}
+						.col-sm-4
+							.index-product{style: "background-image: url(#{image_path "#{weed.image}"})"}
+								%br
+								%h2
+									&nbsp
+									= weed.name
+									&nbsp
+								%br
+								%br
+								%p
+									&nbsp
+									Mood:
+									= weed.mood
+									&nbsp
+								%br
+								%p
+									&nbsp
+									Strength:
+									= weed.strength
+									&nbsp
+								%br
+								%p
+									&nbsp
+									Price: $
+									= weed.price
+									&nbsp

@@ -48,7 +48,7 @@ class WeedsController < ApplicationController
 	end
 
 	def weed_params
-		params.require(:weed).permit(:name, :description, :price, :allergies, :ingredients, :strength, :thc, :mood)
+		params.require(:weed).permit(:name, :description, :price, :allergies, :ingredients, :strength, :thc, :mood, :image)
 	end
 
 end

@@ -1,6 +1,8 @@
 = form_for @weed do |f|
 	= f.text_field :name, class: 'form-control', placeholder: 'Name'
 	%br
+	= f.text_field :image, class: 'form-control', placeholder: 'Image path like so: "my_picture.png"'
+	%br
 	= f.text_area :description, class: 'form-control', placeholder: 'Description'
 	%br
 	= f.select :strength, options_for_strength
