@@ -24,6 +24,7 @@ html {
 
 body {
 		font-family: 'Raleway', sans-serif;
+		color: #2c3e50;
 }
 
 #side-nav {
@@ -47,9 +48,9 @@ body {
 	a:hover {
 		text-decoration: none;
 		color: #9b59b6;
+		background-color: #fff;
 	}
 }
-
 
 #admin-mode {
 	border: 1px solid white;
@@ -59,38 +60,95 @@ body {
 	margin-top: 300px;
 }
 
+#main {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#products-wrapper {
+	a { color: #2c3e50;}
+	a:hover {
+		color: #2c3e50;
+		text-decoration: none;
+	}
+}
+
+.index-product-row {
+	margin-left: 0px;
+}
+
+.index-product {
+	border: 1px solid #16a085;
+	height: 42vh;
+}
+
 .show-wrapper {
 	margin-top: 50px;
+	padding-left: 20px;
+	height: 60vh;
 }
 
 .quantity {
 	background-color: #16a085;
 	padding: 0;
 	color: #fff;
-	text-align: center;
 }
 
 #product-side-info {
-	border-right: 1px solid #16a085;
 	padding-right: 0px;
 	height: 350px;
+	text-align: center;
+}
+
+#product-main {
+	border-left: 2px solid #16a085;
 }
 
 #product-heading h2 {
-	margin-top: -5px;
+	margin-top: -7px;
+	font-size: 300%;
 }
 
+#product-separator {
+	border-top: 2px solid #16a085;
+}
+
+#product-description {
+	font-size: 110%;
+}
+
+.suggestions-wrapper {
+	border-top: 4px solid #16a085;
+	margin-top: 0px;
+	a { color: #2c3e50;	}
+	a:hover {
+		color: #2c3e50;
+		text-decoration: none;
+	}
+	#suggested_second {
+		border-left: 2px solid #16a085;
+		border-right: 2px solid #16a085;
+	}
+	#suggested_first, #suggested_second, #suggested_third {
+		height: 32vh;
+	}
+	#suggested_first { padding-left: 30px; }
+	#suggested_third { padding-right: 0px; }
+}
 
 /* Custom bootstrap colors */
 .btn-primary {
 	background-color: #9b59b6;
 }
 
-#panel-top {
-	background-color: #16a085;
-	a { color: #fff }
-	a:hover {
-		text-decoration: none;
-		color: #9b59b6;
-	}
+.btn-primary:hover {
+	text-decoration: none;
+	color: #9b59b6;
+	background-color: #fff;
+	border: 1px solid #9b59b6;
 }
+
+
+
+
+

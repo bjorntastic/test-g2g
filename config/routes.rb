@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/how-it-works', to: 'pages#how'
   get '/about-us', to: 'pages#about'
   get '/checkout', to: 'pages#checkout'
+  get '/admin', to: 'pages#admin'
 
   root "weeds#index"
 

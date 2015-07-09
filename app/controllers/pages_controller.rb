@@ -8,5 +8,8 @@ class PagesController < ApplicationController
 
 	def checkout
 	end
+
+	def admin
+	end
 	
 end

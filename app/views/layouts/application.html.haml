@@ -29,10 +29,9 @@
 						.inner
 							Checkout
 				%li
-					%a#admin-mode{ href: root_path }
+					%a#admin-mode{ href: admin_path }
 						.inner
 							Admin
-	.col-sm-10
-		.container
-			.col-sm-6.col-sm-offset-3.text-center= flash[:notice]
-			= yield
+	.col-sm-10#main
+		.col-sm-6.col-sm-offset-3.text-center= flash[:notice]
+		= yield

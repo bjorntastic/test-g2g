@@ -2,21 +2,15 @@
 	%h1 All Strains
 	%br
 	%br
-	#products-wrapper
-		- @weeds.each_slice(4) do |r|
-			.row
-				- r.each do |weed|
-					.col-sm-3
-						.panel.panel-default
-							.panel-heading#panel-top= link_to weed.name, weed_path(weed)
-							.panel-body= weed.description
-							.panel-footer
-								$
-								= weed.price
-								for
-								= weed.weight
-								oz
-								= link_to "Buy", root_path, class: 'btn btn-primary pull-right'
-
-
-	= link_to 'ADD', new_weed_path, class: 'btn btn-primary'
+#products-wrapper
+	- @weeds.each_slice(3) do |r|
+		.row.index-product-row
+			- r.each do |weed|
+				%a{ href: weed_path(weed)	}
+					.col-sm-4.index-product
+						%h2= weed.name
+						%p
+							Mood:
+							= weed.mood
+						%br
+						%p= weed.strength

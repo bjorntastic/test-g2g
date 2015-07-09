@@ -7,6 +7,9 @@ class WeedsController < ApplicationController
 	end
 
 	def show
+		@suggested_first = Weed.limit(1).offset(1).first
+		@suggested_second = Weed.limit(1).offset(2).first
+		@suggested_third = Weed.limit(1).offset(3).first
 	end
 
 	def new
@@ -45,7 +48,7 @@ class WeedsController < ApplicationController
 	end
 
 	def weed_params
-		params.require(:weed).permit(:name, :description, :price, :type, :weight, :mood)
+		params.require(:weed).permit(:name, :description, :price, :allergies, :ingredients, :strength, :thc, :mood)
 	end
 
 end

@@ -1,21 +1,77 @@
-.container
-	.show-wrapper
+.show-wrapper
+	.row
 		.col-sm-8
 			.col-sm-2#product-side-info
-				.quantity= "#{@weed.weight} oz"
-				%small Per pack
-				%small Medium
-			.col-sm-10
+				.quantity
+					= @weed.thc
+					%small mg THC
+				%small per package
+				%br
+				%br
+				%p
+					%small
+						%b= @weed.strength
+			.col-sm-10#product-main
 				#product-heading
 					%h2= @weed.name
-				#product-flavor
-					%h4= "Type: #{@weed.type} | Mood: #{@weed.mood}"
-				%hr
-
-
+				#product-mood
+					%h4= "Mood: #{@weed.mood}"
+				%hr#product-separator
+				#product-description
+					%em
+						%b
+							%p= "\"#{@weed.description}\""
+				%br
+				%br
+				#product-ingredients
+					%p
+						%strong All Natural Ingredients:
+						%em
+							%small= @weed.ingredients
+				#product-allergies
+					%p
+						%strong	Allergy Warning: 
+						%em
+							%small= @weed.allergies
+	
 		.col-sm-4
-
 		.btn-group
 			= link_to "Back", root_path, class: 'btn btn-default'
 			= link_to "Edit", edit_weed_path(@weed), class: 'btn btn-default'
 			= link_to "Delete", weed_path(@weed), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" }
+	
+.suggestions-wrapper
+	%a{ href: weed_path(@suggested_first) }
+		.col-sm-4#suggested_first
+			%h3= @suggested_first.name
+			%p
+				Mood:
+				= @suggested_first.mood
+			%br
+			%p
+				= @suggested_first.strength
+				| $
+				= @suggested_first.price
+	%a{ href: weed_path(@suggested_second) }
+		.col-sm-4#suggested_second
+			%h3= @suggested_second.name
+			%p
+				Mood:
+				= @suggested_second.mood
+			%br
+			%p
+				= @suggested_second.strength
+				| $
+				= @suggested_second.price
+	%a{ href: weed_path(@suggested_third) }
+		.col-sm-4#suggested_third
+			%h3= @suggested_third.name
+			%p
+				Mood:
+				= @suggested_third.mood
+			%br
+			%p
+				= @suggested_third.strength
+				| $
+				= @suggested_third.price
+
